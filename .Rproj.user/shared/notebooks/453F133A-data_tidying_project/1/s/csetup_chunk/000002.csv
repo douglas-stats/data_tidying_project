@@ -1,0 +1,37 @@
+"0","## install packages if necessary"
+"0","list.of.packages <- c(""httr"", ""readxl"", ""dplyr"", ""tidyr"", ""stringr"", ""reshape2"", ""skimr"", ""ggplot2"")"
+"0","new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,""Package""])]"
+"0","if(length(new.packages)) install.packages(new.packages)"
+"0",""
+"0","## load packages"
+"0","library(httr)"
+"0","library(readxl)"
+"0","library(dplyr)"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(tidyr)"
+"0","library(stringr)"
+"0","library(reshape2)"
+"2","
+Attaching package: ‘reshape2’
+
+"
+"2","The following object is masked from ‘package:tidyr’:
+
+    smiths
+
+"
+"0","library(skimr)"
+"0","library(ggplot2)"

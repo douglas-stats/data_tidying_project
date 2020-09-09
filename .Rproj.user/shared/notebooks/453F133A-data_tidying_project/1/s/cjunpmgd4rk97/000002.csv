@@ -1,0 +1,6 @@
+"0","## use saveRDS() to save each object as a .rds file "
+"0",""
+"0","saveRDS(df1, 'df_department.rds')"
+"0",""
+"0","saveRDS(df2,'df_retail.rds')"
+"0",""

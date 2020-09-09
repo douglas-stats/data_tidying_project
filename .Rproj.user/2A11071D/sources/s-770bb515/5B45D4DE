@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1561739500679.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5B45D4DE",
+    "lastKnownWriteTime" : 1536158492,
+    "last_content_update" : 1536158492,
+    "path" : "/cloud/project/data_tidying_project.Rmd",
+    "project_path" : "data_tidying_project.Rmd",
+    "properties" : {
+        "cursorPosition" : "35,0",
+        "scrollLine" : "30"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
