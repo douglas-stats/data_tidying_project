@@ -5,6 +5,9 @@ date: "9/09/202020"
 output: html_document
 ---
 
+##First Code Chunk
+
+The first part of the project consist in prepare the R environment with all the packages that we will be using to acomplish our objectives. Thats what we made with the first code Chunk.
 
 ```{r setup, include=FALSE}
 ## install packages if necessary
@@ -24,6 +27,8 @@ library(ggplot2)
 ```
 
 ### Get Data
+
+After setting up the R environment, we will extract the data using de **readxl** package
 
 [Data Set 1](https://data.world/retail/department-store-sales): Sales from the Retail Trade and Food Services Report from the US Census. This dataset only covers Department Stores, though the report covers a wide range of retail types. [1992-2016]
 
@@ -46,6 +51,8 @@ colnames(df2) <- df2[1,]
 
 ### Save Raw Data
 
+Saving the data in our repository
+
 ```{r save-data, warning=FALSE} 
 ## use saveRDS() to save each object as a .rds file 
 
@@ -56,6 +63,8 @@ saveRDS(df2,'df_retail.rds')
 ```
 
 ### Wrangle Data
+
+Wrangling data to clean the information and transform datasets from **messy** to **tidy** (long)
 
 ```{r wrangle-df2, warning=FALSE} 
 ## an example working with df2
@@ -100,10 +109,19 @@ df_department <- df1 %>%
   select(business, year, n)
 ```
 
+##Merging data sets
+
+Merging the datasets created
+
 ```{r merge-data, warning=FALSE} 
 ## Now, combine the two data frames
-df_total <- left_join(df_department, df_retail, by = c('business' = 'business'))
+df_total <- df_department %>% left_join(df_retail, by = c('business' = 'business')) %>% 
+  select(business, year = year.x, n = n.x)
 ```
+
+##Ploting
+
+Making some plots with the datasets created
 
 ```{r plot, warning=FALSE, fig.width=10} 
 ## Plot Retail Sales data
