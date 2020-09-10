@@ -121,18 +121,18 @@ df_total <- df_department %>% left_join(df_retail, by = c('business' = 'business
 
 ##Ploting
 
-Making some plots with the datasets created
+Making some plots with the datasets created 
 
 ```{r plot, warning=FALSE, fig.width=10} 
 ## Plot Retail Sales data
-plot1 <- ggplot(df_retail, aes(x=year,y=n,colour=business)) +
+ggplot(df_retail, aes(x=year,y=n,colour=business)) +
   geom_point() 
 
 ## Plot Department Sales data
-plot2 <- ggplot(df_department, aes(x=year,y=n)) +
+ggplot(df_department, aes(x=year,y=n)) +
   geom_point() 
 
 ## Plot Combined Data
-plot3 <- ggplot(df_total, aes(x=year,y=as.numeric(n), colour=business)) +
-  geom_point()
+ggplot(df_total, aes(x=year,y=as.numeric(n), colour=business)) +
+  geom_point() 
 ```
